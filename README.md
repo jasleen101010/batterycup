@@ -1,5 +1,5 @@
-# Electricity Billing System
-This is a GUI made using Java Swing.
+# batterycup
+This is a GUI made using Java Swing for computing bills for Electric Cars.
 It lets User perform multiple operations like:-
 
 
@@ -35,7 +35,7 @@ It contains 9 different classes which works together to create a better user exp
 ->Connection Setup class(JDBC - MySQL)
 
 ## Database (MySQL)
-Database for this Electricity Billing System contains 4 Tables
+Database for this Electric Car Billing System contains 4 Tables
 
 
 ->Login Table (UserName,Password)
