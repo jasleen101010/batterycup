@@ -18,7 +18,7 @@ public class customer_details extends JFrame implements ActionListener{
         try{
             conn c1  = new conn();
             String s1 = "select * from emp";
-            ResultSet rs  = c1.s.executeQuery(s1);
+            ResultSet rs  = c1.executeQuery(s1);
             while(rs.next()){
                 y[i][j++]=rs.getString("name");
                 y[i][j++]=rs.getString("meter_number");

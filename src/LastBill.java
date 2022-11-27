@@ -1,3 +1,5 @@
+import com.sun.source.tree.StatementTree;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -53,8 +55,15 @@ public class LastBill extends JFrame implements ActionListener
         try{
             conn c = new conn();
 
-            ResultSet rs = c.s.executeQuery("select * from emp where meter_number="+c1.getSelectedItem());
+            // ResultSet rs = c.s.executeQuery("select * from emp where meter_number="+c1.getSelectedItem());
+            Class.forName("com.mysql.jdbc.Driver") ;
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jasleen", "root", "123456") ;
+            Statement stmt = null;
 
+            stmt = conn.createStatement();
+            String query = "select * from emp where meter_number="+c1.getSelectedItem();
+
+            ResultSet rs = stmt.executeQuery(query);
             if(rs.next()){
                 t1.append("\n    Customer Name:"+rs.getString("name"));
                 t1.append("\n    Meter Number:  "+rs.getString("meter_number"));
@@ -69,7 +78,14 @@ public class LastBill extends JFrame implements ActionListener
 
             t1.append("Details of the Last Bills\n\n\n");
 
-            rs = c.s.executeQuery("select * from bill where meter_number="+c1.getSelectedItem());
+            // rs = c.s.executeQuery("select * from bill where meter_number="+c1.getSelectedItem());
+            Class.forName("com.mysql.jdbc.Driver") ;
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jasleen", "root", "123456") ;
+            stmt = null;
+
+            stmt = conn.createStatement();
+            query = "select * from bill where meter_number="+c1.getSelectedItem();
+            rs = stmt.executeQuery(query);
 
             while(rs.next()){
                 t1.append("       "+ rs.getString("month") + "           " +rs.getString("amount") + "\n");

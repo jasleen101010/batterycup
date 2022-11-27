@@ -82,26 +82,26 @@ public class login extends JFrame implements ActionListener
             Statement stmt = null;
 
             stmt = conn.createStatement();
-            String query = "select * from designation;" ;
+            String query = "select * from login where username = '\"+a+\"' and password = '\"+b+\"'" ;
             ResultSet rs = stmt.executeQuery(query);
 //
 //            String a  = tf1.getText();
 //            String b  = pf2.getText();
 //            String q  = "select * from login where username = '"+a+"' and password = '"+b+"'";
 //            ResultSet rs = c1.s.executeQuery(q);
+            if(rs.next()){
+                new Project().setVisible(true);
+                this.setVisible(false);
 
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
-        }
-        if(rs.next()){
-            new Project().setVisible(true);
-            this.setVisible(false);
-
-        }else{
+            }else{
                 JOptionPane.showMessageDialog(null, "Invalid login");
                 setVisible(false);
 
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
         }
+
     }
 
     public static void main(String[] args){

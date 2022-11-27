@@ -88,8 +88,14 @@ public class new_customer extends JFrame implements ActionListener{
         String q1 = "insert into emp values('"+a+"','"+c+"','"+d+"','"+e+"','"+f+"','"+g+"','"+h+"')";
 
         try{
-            conn c1 = new conn();
-            c1.s.executeUpdate(q1);
+//            conn c1 = new conn();
+//            c1.s.executeUpdate(q1);
+            Class.forName("com.mysql.jdbc.Driver") ;
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jasleen", "root", "123456") ;
+            Statement stmt = null;
+
+            stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(q1);
             JOptionPane.showMessageDialog(null,"Employee Created");
             this.setVisible(false);
 

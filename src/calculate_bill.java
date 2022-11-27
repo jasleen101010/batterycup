@@ -107,12 +107,8 @@ public class calculate_bill extends JFrame implements ActionListener
         String q = "insert into bill values('"+a+"','"+c+"','"+b+"','"+p3+"')";
 
         try{
-
-            Class.forName("com.mysql.jdbc.Driver") ;
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jasleen", "root", "123456") ;
-
-            conn.executeQuery(q);
-
+            conn c1 = new conn();
+            c1.executeUpdate(q);
             JOptionPane.showMessageDialog(null,"Bill Updated");
         }catch(Exception aee){
             aee.printStackTrace();

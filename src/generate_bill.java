@@ -71,7 +71,15 @@ public class generate_bill extends JFrame implements ActionListener{
             String month = c2.getSelectedItem();
             t1.setText("\tReliance Power Limited\nELECTRICITY BILL FOR THE MONTH OF "+month+" ,2018\n\n\n");
 
-            ResultSet rs = c.s.executeQuery("select * from emp where meter_number="+c1.getSelectedItem());
+            //ResultSet rs = c.s.executeQuery("select * from emp where meter_number="+c1.getSelectedItem());
+            Class.forName("com.mysql.jdbc.Driver") ;
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jasleen", "root", "123456") ;
+            Statement stmt = null;
+
+            stmt = conn.createStatement();
+            String query = "select * from bill where meter_number="+c1.getSelectedItem();
+
+            ResultSet rs = stmt.executeQuery(query);
 
             if(rs.next()){
                 t1.append("\n    Customer Name:"+rs.getString("name"));
@@ -85,7 +93,15 @@ public class generate_bill extends JFrame implements ActionListener{
                 t1.append("\n");
             }
 
-            rs = c.s.executeQuery("select * from tax");
+            //rs = c.s.executeQuery("select * from tax");
+            Class.forName("com.mysql.jdbc.Driver") ;
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jasleen", "root", "123456") ;
+            stmt = null;
+
+            stmt = conn.createStatement();
+            query = "select * from tax";
+
+            rs = stmt.executeQuery(query);
 
             if(rs.next()){
                 t1.append("\n    Meter Location:"+rs.getString("meter_location"));
@@ -104,7 +120,15 @@ public class generate_bill extends JFrame implements ActionListener{
 
             }
 
-            rs = c.s.executeQuery("select * from bill where meter_number="+c1.getSelectedItem());
+            //rs = c.s.executeQuery("select * from bill where meter_number="+c1.getSelectedItem());
+            Class.forName("com.mysql.jdbc.Driver") ;
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jasleen", "root", "123456") ;
+            stmt = null;
+
+            stmt = conn.createStatement();
+            query = "select * from bill where meter_number="+c1.getSelectedItem();
+
+            rs = stmt.executeQuery(query);
 
             if(rs.next()){
                 t1.append("\n    Current Month :\t"+rs.getString("month"));

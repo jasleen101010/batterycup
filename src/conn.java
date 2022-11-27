@@ -37,4 +37,11 @@ public class conn {
             System.out.println(exception);
         }
     } // function ends
+
+    public void executeUpdate(String q) {
+    }
+
+    public ResultSet executeQuery(String s1) {
+        return null;
+    }
 } // class ends

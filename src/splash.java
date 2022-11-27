@@ -2,9 +2,9 @@ import java.awt.*;
 import javax.swing.*;
 public class splash
 {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
-        fframe f1=new fframe();
+        frame f1=new frame();
         f1.setVisible(true);
         int i;
         int x=1;
@@ -21,10 +21,10 @@ public class splash
 
 
     }
-    public static class fframe extends JFrame implements Runnable
+    public static class frame extends JFrame implements Runnable
     {
         Thread t1;
-        fframe()
+        frame()
         {
             super("Welcome to batterycup");
             setLayout(new FlowLayout());
