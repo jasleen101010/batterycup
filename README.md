@@ -1,4 +1,4 @@
-# batterycup
+# batterycup 🪫🔋
 This is a GUI made using Java Swing for computing bills for Electric Cars.
 It lets User perform multiple operations like:-
 
@@ -40,14 +40,19 @@ Database for this Electric Car Billing System contains 4 Tables
 
 ->Login Table (UserName,Password)
 
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/login%20table-java.png">
+
 ->Bill Table(MeterNumber,Units,Month,Amount)
+
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/bill%20table.png">
 
 ->Emp Table(Name, MeterNumber, Address, State, City, Email, Phone)
 
-->Tax Table(MeterLocation,MeterType,PhaseCode,BillType,Days,MeterRent,MCB_Rent,ServiceRent,GST)
+
 
 
 Java communicates with MySQL tables using JDBC which stands for Java Database Connectivity.
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/queries-java.png">
 
 ## Screenshots:
 
@@ -57,7 +62,7 @@ Java communicates with MySQL tables using JDBC which stands for Java Database Co
 
 ## Main Page
 
-<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/Main.JPG" width="600" height="500">
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/batterycup%20menu.png" width="600" height="500">
 
 ## Add Customer
 
