@@ -44,10 +44,10 @@ Database for this Electric Car Billing System contains 4 Tables
 
 ->Bill Table(MeterNumber,Units,Month,Amount)
 
-<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/bill%20table.png">
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/bill%20.png">
 
 ->Emp Table(Name, MeterNumber, Address, State, City, Email, Phone)
-
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/emp%20table.png">
 
 
 
@@ -66,16 +66,16 @@ Java communicates with MySQL tables using JDBC which stands for Java Database Co
 
 ## Add Customer
 
-<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/AddC.JPG" width="500" height="500">
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/new%20user%20.png" width="500" height="500">
 
 ## Calculate Bill
 
-<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/CalculateBill.JPG" width="500" height="500">
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/new%20entry.png" width="500" height="500">
 
 ## Details
 
-<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/Details.JPG" width="800" height="300">
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/customer%20details.png" width="800" height="300">
 
 ## Generate Bill
 
-<img src="https://github.com/Adarsh9616/Electricity_Billing_System/blob/master/ScreenShots/GenerateBill.JPG" width="400" height="700">
+<img src="https://github.com/jasleen101010/batterycup/blob/main/ScreenShots/generate%20bill.png" width="400" height="700">
